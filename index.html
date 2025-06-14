@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+			<title>eulark生电服务器 | 官方网站</title>
+			<meta charset="utf-8" />
+			<meta name="keywords" content="eulark">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+			<link rel="stylesheet" href="assets/css/main.css" />
+			<link rel="shortcut icon" href="images/icon.ico"/>
+			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		</head>
+	<body class="is-preload">
+</header>
+<ul class="alt">
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <a href="index.html" class="logo"><strong>eulark</strong> <span> 官方网站</span></a>
+        <nav>
+            <a href="#menu">菜单</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="function.html" >服务器介绍</a></li>
+            <li><a href="jiao.html">加入eulark</a></li>
+    </nav>
+    <!-- Banner -->
+    <section id="banner" class="major">
+        <div class="inner">
+            <span class="image">
+    					<img src="images/pic07.jpg" alt="" />
+    				</span>
+            <header class="major">
+                <h1>欢迎来到eulark </h1>
+            </header>
+            <div class="content">
+                <p id="h1"></p>
+                <ul class="actions ">
+                    <li><a href="#two" class="button next scrolly">加入eulark</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    </html>
+    </script>
+    </section>
+    <script>
+        window.onload=function starttime(){
+    		        time(h1,'2025/1/4');   
+    		        ptimer = setTimeout(starttime,1000); 
+    		}
+    		    function time(obj,futimg){
+    		        var nowtime = new Date().getTime(); 
+    		        var futruetime =  new Date(futimg).getTime(); 
+    		        var msec = nowtime-futruetime; 
+    		        var time = (msec/1000);  
+    		        var day = parseInt(time/86400); 
+    		        var hour = parseInt(time/3600)-24*day;    
+    		        var minute = parseInt(time%3600/60); 
+    		        var second = parseInt(time%60); 
+    		        obj.innerHTML="eulark已运行"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+""
+    		}
+    </script>
+				<!-- Main -->
+					<div id="main">
+                    <section id="one" class="tiles">
+                    </article>
+                    <article>
+                        <span class="image">
+                    		<img src="images/tp1.jpg" alt="" />
+                    				</span>
+                        <header class="major">
+                            <h3><a href="function.html" class="link">服务器介绍</a></h3>
+                            <p>eulark introduce</p>
+                        </header>
+                    </article>
+                    <article>
+                        <span class="image">
+                            <img src="images/tp2.jpg" alt="" />
+                                    </span>
+                            <header class="major">
+                                <h3><a href="team.html" class="link">eulark 重要人员</a></h3>
+                                <p>eulark server team</p>
+                            </header>
+                        </article>
+                        </section>
+
+						<!-- One -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>欢迎来到 eulark生电服务器</h2>
+									</header>
+									<ul class="alt">
+										<li>服务器玩家友好，管理无神权</li>
+										<li>高配Mac mini4物理机</li>
+										<li>加载多种生电便利工具</li>
+										<li>服内欢迎新人哦</li>
+										<li>严格的白名单审核，提供高质量玩家氛围</li>
+									</ul>
+									<ul class="actions">
+										<li><a href="jiao.html" class="button next">加入eulark</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>由<strong>Silence_yuan</strong>制作</li><li>All Rights Reserved</li><li><a href="https://space.bilibili.com/3537106324425184">bilibili:Silence_yuan</a></li><li>Design: Redsugar</li><li>&copy; eulark 2025</li><!-- eulark服务器网络技术Silence_yuan  -->
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+
+<canvas id="particleCanvas"></canvas>
+<script>
+    const canvas = document.getElementById('particleCanvas');
+  Object.assign(canvas.style, {
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    zIndex: '9999',
+    pointerEvents: 'none'
+  });
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  function createParticles(x, y) {
+    for (let i = 0; i < 30; i++) {
+      particles.push({
+        x: x,
+        y: y,
+        radius: Math.random() * 4 + 2,
+        color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+        vx: (Math.random() - 0.5) * 6,
+        vy: (Math.random() - 0.5) * 6,
+        life: 60
+      });
+    }
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life--;
+      p.radius *= 0.96;
+
+      if (p.life <= 0 || p.radius <= 0.5) {
+        particles.splice(i, 1);
+        continue;
+      }
+
+      ctx.fillStyle = p.color;
+      ctx.fillRect(p.x, p.y, p.radius, p.radius); // 方块绘制
+    }
+    requestAnimationFrame(animateParticles);
+  }
+
+  document.addEventListener('click', (e) => {
+    createParticles(e.clientX, e.clientY);
+  });
+
+  animateParticles();
+</script>
+	</body>
+</html>
